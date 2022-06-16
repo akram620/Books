@@ -11,7 +11,9 @@
         <entry key="..\:/Books/app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.1965" />
         <entry key="..\:/Books/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1965" />
         <entry key="..\:/Books/app/src/main/res/drawable/ic_book6.xml" value="0.268" />
+        <entry key="..\:/Books/app/src/main/res/drawable/ic_favorite_0.xml" value="0.209" />
         <entry key="..\:/Books/app/src/main/res/drawable/ic_favorite_1.xml" value="0.142" />
+        <entry key="..\:/Books/app/src/main/res/drawable/ic_favorite_3.xml" value="0.231" />
         <entry key="..\:/Books/app/src/main/res/font/poppins.xml" value="0.39791666666666664" />
         <entry key="..\:/Books/app/src/main/res/font/poppins_bold.xml" value="0.39791666666666664" />
         <entry key="..\:/Books/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -20,7 +22,7 @@
         <entry key="..\:/Books/app/src/main/res/layout/fragment_market.xml" value="0.25" />
         <entry key="..\:/Books/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
         <entry key="..\:/Books/app/src/main/res/layout/fragment_view_book.xml" value="0.25" />
-        <entry key="..\:/Books/app/src/main/res/layout/item_new.xml" value="0.29444444444444445" />
+        <entry key="..\:/Books/app/src/main/res/layout/item_new.xml" value="0.35555555555555557" />
         <entry key="..\:/Books/app/src/main/res/layout/item_popular.xml" value="0.2534246575342466" />
         <entry key="..\:/Books/app/src/main/res/layout/list_new.xml" value="0.24270833333333333" />
       </map>

@@ -22,6 +22,8 @@ class FavoriteFragment : Fragment() {
     private lateinit var binding: FragmentFavoriteBinding
     private lateinit var adapterNewBooks: AdapterNewBooks
 
+    private lateinit var bundle: Bundle
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +33,8 @@ class FavoriteFragment : Fragment() {
         booksViewModel = ViewModelProvider(this)[BooksViewModel::class.java]
 
         binding.recFavItem.layoutManager = LinearLayoutManager(context)
+
+        bundle = Bundle()
 
         adapterNewBooks = AdapterNewBooks(
             {selectedFavoriteButton: Book -> clickOnFavoriteIcon(selectedFavoriteButton)},
@@ -61,12 +65,29 @@ class FavoriteFragment : Fragment() {
 
     private fun clickOnItem(book: Book){
         booksViewModel.incrementPopulation(book.id, book.popular_score + 1)
+
+
+        bundle.putInt("id", book.id)
+        bundle.putString("name", book.name)
+        bundle.putString("author", book.author)
+        bundle.putFloat("rating", book.rating)
+        bundle.putString("description", book.description)
+        bundle.putString("price", book.price)
+        bundle.putBoolean("is_favorite", book.is_favorite)
+
+
+
         replaceFragment()
     }
 
     private fun replaceFragment(){
+
+        val fragment = ViewBookFragment()
+        fragment.arguments = bundle
+
+
         val transition = requireActivity().supportFragmentManager.beginTransaction()
-        transition.replace(R.id.fragmentContainer, ViewBookFragment())
+        transition.replace(R.id.fragmentContainer, fragment)
         transition.commit()
     }
 }
